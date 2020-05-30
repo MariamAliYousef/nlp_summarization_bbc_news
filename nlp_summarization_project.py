@@ -12,7 +12,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 # read dataset file it contains 2225 rows the text data in text column
-dataset = pd.read_csv("E:/MyProgram/arb/bbc_fulltext_and_category/bbc_text.csv")
+dataset = pd.read_excel("E:/MyProgram/arb/nlp_project/dataset/news_data/news_dataset.xlsx")
 # stopwords for english language such as  the - a - an - ...  
 stopWords = set(stopwords.words('english'))
 
