@@ -55,9 +55,6 @@ def preprocess_news():
     
     return lemmatization_list
 
-
-
-
 # calculate the weighted frequency for words in each article
 def calc_weighted_freq_word():
     lemmatization_list = preprocess_news()
@@ -74,13 +71,6 @@ def calc_weighted_freq_word():
         n += 1
     return word_frequencies
 
-
-
-
-
-
-
-
 # find maximum frequency in every dictionary and recalculate the frequency for each word in each news 
 # by divie the weighted freq for each word by the maximum freq for each article
 def calc_maxi_freq_for_words():
@@ -94,15 +84,6 @@ def calc_maxi_freq_for_words():
         for w in word_frequencies[ind].keys():
             word_frequencies[ind][w] = word_frequencies[ind][w] / maximum_freqs[ind]
     return word_frequencies
-
-
-
-
-
-
-
-
-
 
 
 # calculating sentences score
@@ -124,10 +105,6 @@ def sents_scores():
                            sentence_score[sent] += word_frequencies[num][word]
         sentence_scores.update({num : sentence_score})
     return sentence_scores
-
-
-
-
 
 
 # to get the 6th largest sentences
